@@ -33,18 +33,19 @@
                     <a class="nav-link" href="http://localhost:3000/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="http://localhost:3000/pdfList">List <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="http://localhost:3000/pdfList">List <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        More
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Merge specific page</a>
+                        <a class="dropdown-item" href="#">Merge from page to page</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Merge array of Page</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -57,17 +58,14 @@
             <form class="form-inline my-2 my-lg-0">
                 <a href="" class="form-control mr-sm-2">Login</a>
             </form>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
     </nav>
     <div class="container">
         <form method="post" action="/mergePDF" enctype='multipart/form-data'>
             <div class="form-group">
                 <label for="exampleFormControlFile1">Select PDF</label>
-                <input type="file" name="pDFs" class="form-control-file" id="exampleFormControlFile1" multiple accept=".pdf">
+                <input type="file" name="pDFs" class="form-control-file" id="exampleFormControlFile1" multiple
+                    accept=".pdf">
                 <input class="btn btn-primary mt-3" type="submit" value="Submit">
             </div>
         </form>
@@ -86,3 +84,8 @@
 </body>
 
 </html>
+
+<!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->

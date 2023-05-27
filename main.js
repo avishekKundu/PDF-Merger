@@ -13,6 +13,15 @@ app.get('/', (req, res) => {
 app.get('/pdfList', (req, res) => {
   res.sendFile(path.join(__dirname, "./templates/list.html"))
 })
+app.get('/mergeOption1', (req, res) => {
+  res.sendFile(path.join(__dirname, "./templates/list.html"))
+})
+app.get('/mergeOption2', (req, res) => {
+  res.sendFile(path.join(__dirname, "./templates/list.html"))
+})
+app.get('/mergeOption3', (req, res) => {
+  res.sendFile(path.join(__dirname, "./templates/list.html"))
+})
 
 app.post('/mergePDF', upload.array('pDFs', 1000000), async (req, res, next) => {
   // req.files is array of `photos` files
