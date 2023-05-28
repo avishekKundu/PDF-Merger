@@ -14,13 +14,13 @@ app.get('/pdfList', (req, res) => {
   res.sendFile(path.join(__dirname, "./templates/list.html"))
 })
 app.get('/mergeOption1', (req, res) => {
-  res.sendFile(path.join(__dirname, "./templates/list.html"))
+  res.sendFile(path.join(__dirname, "./templates/mergeOption1.html"))
 })
 app.get('/mergeOption2', (req, res) => {
-  res.sendFile(path.join(__dirname, "./templates/list.html"))
+  res.sendFile(path.join(__dirname, "./templates/mergeOption2.html"))
 })
 app.get('/mergeOption3', (req, res) => {
-  res.sendFile(path.join(__dirname, "./templates/list.html"))
+  res.sendFile(path.join(__dirname, "./templates/mergeOption3.html"))
 })
 
 app.post('/mergePDF', upload.array('pDFs', 1000000), async (req, res, next) => {
