@@ -26,8 +26,9 @@ app.get('/mergeOption3', (req, res) => {
 app.post('/mergePDF', upload.array('pDFs', 1000000), async (req, res, next) => {
   // req.files is array of `photos` files
   // req.body will contain the text fields, if there were any
-  let pDfsID = await pdfMerge(path.join(__dirname, req.files[0].path),path.join(__dirname, req.files[0].path))
-  res.redirect(`http://localhost:3000/static/${pDfsID}.pdf`)
+  let pDfsID = await pdfMerge(path.join(__dirname, req.files))
+  // let pDfsID = await pdfMerge(path.join(__dirname, req.files[0].path),path.join(__dirname, req.files[0].path))
+  // res.redirect(`http://localhost:3000/static/${pDfsID}.pdf`)
 })
 
 app.listen(port, () => {
