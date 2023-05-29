@@ -4,7 +4,7 @@ var merger = new PDFMerger();
 
 const pdfMerge = async (files) => {
   for (let i = 0; i < files.length; i++) {
-    await merger.add(files[i]);
+    await merger.add(files[i]); 
     console.log(files[i])
   }
 
