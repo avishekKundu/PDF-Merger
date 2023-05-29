@@ -27,7 +27,7 @@ app.post('/mergePDF', upload.array('pDFs', 1000000), async (req, res, next) => {
   // req.files is array of `photos` files
   // req.body will contain the text fields, if there were any
   let paths = [];
-  for(let file of req.files){
+  for (let file of req.files) {
     paths.push(path.join(__dirname, '/uploads', file.filename));
   }
   let pDfsID = await pdfMerge(paths);
